@@ -1,3 +1,3 @@
 package configs.services
 
-String = PORT '8443'
+public String = PORT '8443'
