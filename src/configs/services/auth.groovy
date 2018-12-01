@@ -1,5 +1,9 @@
 package configs.services
 
-class Port {
-  String port = 8443
+def info(message) {
+    echo "INFO: ${message}"
+}
+
+def warning(message) {
+    echo "WARNING: ${message}"
 }
