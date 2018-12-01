@@ -1,5 +1,3 @@
 package configs.services
 
-class Point {
-  float x,y,z
-}
+String = PORT '8443'
