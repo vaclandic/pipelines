@@ -10,6 +10,4 @@ class Build {
         buildInfo = Artifactory.newBuildInfo()
         rtMaven.deployer server: server, releaseRepo: 'artifactory', snapshotRepo: 'artifactory'
     }
-    
-    return this
 }
