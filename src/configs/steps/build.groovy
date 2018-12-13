@@ -21,14 +21,13 @@ def buildAndPush(java_version="10", serviceName) {
 }
 
 def dockerBuild(serviceName, workspace) {
-//    def servicePom = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
-//    def serviceVersion = servicePom.version.text()
-    sh "good"
+    def servicePom = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
+    def serviceVersion = servicePom.version.text()
 
-//    sh "docker build --pull --build-arg SERVICE_NAME=${serviceName} -t decker.trph.ru/${serviceName}:${serviceVersion} ${serviceName}"
-//    sh "docker push docker.trph.ru/${serviceName}:${serviceVersion}"
+    sh "docker build --pull --build-arg SERVICE_NAME=${serviceName} -t decker.trph.ru/${serviceName}:${serviceVersion} ${serviceName}"
     return this
 }
+//    sh "docker push docker.trph.ru/${serviceName}:${serviceVersion}"
 
 def setEnv(workspace, serviceName, deployHost) {
     def project = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
