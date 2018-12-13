@@ -11,8 +11,8 @@ def artifactoryConfig() {
     def rtMaven.tool = "maven"
     def buildInfo = Artifactory.newBuildInfo()
     rtMaven.deployer server: server, releaseRepo: 'artifactory', snapshotRepo: 'artifactory'
+    return this
 }
-return this
 
 def setEnv(workspace, serviceName, deployHost) {
     def project = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
