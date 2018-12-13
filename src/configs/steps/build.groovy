@@ -34,6 +34,6 @@ def mvnBuild(java_version="10", serviceName) {
     buildInfo = Artifactory.newBuildInfo()
     rtMaven.deployer server: server, releaseRepo: 'artifactory', snapshotRepo: 'artifactory'
 
-    rtMaven.run pom: "${serviceNAME}/pom.xml" as String, goals: "-U clean install -Dmaven.test.skip=true -s /home/jenkins/settings.xml", buildInfo: buildInfo
+    rtMaven.run pom: "${serviceName}/pom.xml" as String, goals: "-U clean install -Dmaven.test.skip=true -s /home/jenkins/settings.xml", buildInfo: buildInfo
     return this
 }
