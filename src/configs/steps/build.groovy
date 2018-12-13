@@ -24,7 +24,6 @@ def pullArtifact() {
     def rtMaven = Artifactory.newMavenBuild()
 
     rtMaven.tool = "maven"
-    buildInfo = Artifactory.newBuildInfo()
     rtMaven.deployer server: server, releaseRepo: 'artifactory', snapshotRepo: 'artifactory'
 
     server.publishBuildInfo buildInfo
