@@ -1,6 +1,6 @@
 package configs.services
 
-class Auth {
+class Dictionaries {
     public static final String NAME         = 'srv-dictionaries';
     public static final String PORT         = '8523';
     public static final String JAVA_VERSION = '10';

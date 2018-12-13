@@ -1,6 +1,6 @@
 package configs.services
 
-class Auth {
+class Router {
     public static final String NAME         = 'srv-router';
     public static final String PORT         = '8503';
     public static final String JAVA_VERSION = '10';

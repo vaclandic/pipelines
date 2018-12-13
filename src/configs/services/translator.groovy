@@ -1,6 +1,6 @@
 package configs.services
 
-class Auth {
+class Translator {
     public static final String NAME         = 'srv-translator';
     public static final String PORT         = '8463';
     public static final String JAVA_VERSION = '10';

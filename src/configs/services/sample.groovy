@@ -1,6 +1,6 @@
 package configs.services
 
-class Auth {
+class Sample {
     public static final String NAME         = 'srv-sample';
     public static final String PORT         = '8883';
     public static final String JAVA_VERSION = '10';

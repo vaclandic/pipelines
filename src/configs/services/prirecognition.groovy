@@ -1,6 +1,6 @@
 package configs.services
 
-class Auth {
+class Prirecognition {
     public static final String NAME         = 'srv-prirecognition';
     public static final String PORT         = '8453';
     public static final String JAVA_VERSION = '10';

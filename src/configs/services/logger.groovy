@@ -1,6 +1,6 @@
 package configs.services
 
-class Auth {
+class Logger {
     public static final String NAME         = 'srv-logger';
     public static final String PORT         = '8553';
     public static final String JAVA_VERSION = '10';

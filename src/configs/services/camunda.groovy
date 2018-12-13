@@ -1,6 +1,6 @@
 package configs.services
 
-class Auth {
+class Camunda {
     public static final String NAME         = 'srv-camunda';
     public static final String PORT         = '8753';
     public static final String JAVA_VERSION = '10';

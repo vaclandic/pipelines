@@ -1,6 +1,6 @@
 package configs.services
 
-class Auth {
+class Frontier {
     public static final String NAME         = 'srv-frontier';
     public static final String PORT         = '8433';
     public static final String JAVA_VERSION = '10';

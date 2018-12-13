@@ -1,6 +1,6 @@
 package configs.services
 
-class Auth {
+class AdapterSmdlp {
     public static final String NAME         = 'srv-adapter-smdlp';
     public static final String PORT         = '8563';
     public static final String JAVA_VERSION = '10';

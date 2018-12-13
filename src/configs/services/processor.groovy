@@ -1,6 +1,6 @@
 package configs.services
 
-class Auth {
+class Processor {
     public static final String NAME         = 'srv-processor';
     public static final String PORT         = '8513';
     public static final String JAVA_VERSION = '10';

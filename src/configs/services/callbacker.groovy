@@ -1,6 +1,6 @@
 package configs.services
 
-class Auth {
+class Callbacker {
     public static final String NAME         = 'srv-callbacker';
     public static final String PORT         = '8763';
     public static final String JAVA_VERSION = '10';
