@@ -21,8 +21,8 @@ def buildAndPush(java_version="10", serviceName) {
 }
 
 def dockerBuild(String serviceName, String workspace) {
-    def servicePom = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
-    def serviceVersion = servicePom.version
+    servicePom = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
+    serviceVersion = servicePom.version
     println servicePom.version
     sh "echo ${servicePom.version}"
 
