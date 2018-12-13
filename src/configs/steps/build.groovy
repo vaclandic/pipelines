@@ -29,12 +29,18 @@ def dockerBuild(serviceName, serviceVersion) {
     sh "docker push docker.trph.ru/${serviceName}:${serviceVersion}"
 }
 
-def setEnv(workspace, serviceName, deployHost) {
-    def project = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
-    env.SERVICE = serviceName
-    env.HOST_NAME = deployHost
+def deployService(serviceName, serviceVersion, environment, deployStructure, debug) {
+        env.SERVICE = serviceName
+        env.HOST_NAME = deployStructure[environment]['deploy_servers'] 
+        env.STAGE = deployStructure[environment]['stage']
+        env.CPU_LIMIT = deployStructure[environment]['cpu_limit']
+        env.MEMORY_LIMIT = deployStructure[environment]['memory_limit']
+        env.APP_VERSION = "${serviceVersion}"
 
-    if (debug == "true"){
-       env.DEBUG_OPTS = service.DEBUG_OPTS
-    }
+        if (debug == "true"){
+           env.DEBUG_OPTS = deployStructure[environment]['debug_opts'] 
+        }
+        sh "erb ${serviceName}/nomad.plan.erb > ${serviceName}/nomad.plan"
+//        sh "nomad stop ${serviceName}-${environment} || exit 0"
+//        sh "nomad run ${serviceName}/nomad.plan"
 }
