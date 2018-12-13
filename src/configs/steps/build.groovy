@@ -14,7 +14,7 @@ def artifactoryConfig() {
 }
 return this
 
-def setEnv(workspace, serviceName, deployHost, debug, ) {
+def setEnv(workspace, serviceName, deployHost) {
     def project = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
     env.SERVICE = serviceName
     env.HOST_NAME = deployHost
