@@ -19,10 +19,10 @@ def buildAndPush(java_version="10", serviceName) {
 }
 
 def dockerBuild(String serviceName, String workspace) {
-    servicePom = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
-    serviceVersion = servicePom.version
+//    servicePom = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
+//    serviceVersion = servicePom.version
 
-    sh "docker build --pull --build-arg SERVICE_NAME=${serviceName} -t docker.trph.ru/${serviceName}:${serviceVersion} ${serviceName}"
+    sh "docker build --pull --build-arg SERVICE_NAME=srv-auth -t docker.trph.ru/srv-auth:test srv-auth"
 }
 //    sh "docker push docker.trph.ru/${serviceName}:${serviceVersion}"
 
