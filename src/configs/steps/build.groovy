@@ -27,7 +27,6 @@ def dockerBuild(String serviceName, String workspace) {
     sh "echo Good"
 
 //    sh "docker build --pull --build-arg SERVICE_NAME=${serviceName} -t docker.trph.ru/${serviceName}:${serviceVersion} ${serviceName}"
-    return this
 }
 //    sh "docker push docker.trph.ru/${serviceName}:${serviceVersion}"
 
