@@ -3,6 +3,7 @@ package config.steps
 class Build {
     def checkoutFrom(repo="tracepharmservices", branch="master") {
         git([url: "git@bitbucket.org:TracePharm/${repo}.git", branch: "${branch}"])
+        return this
     }
     
     def runArtifactory() {
