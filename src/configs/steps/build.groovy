@@ -20,9 +20,9 @@ def buildAndPush(java_version="10", serviceName) {
     rtMaven.deployer.deployArtifacts buildInfo
 }
 
-def dockerBuild(serviceName, workspace) {
+def dockerBuild(String serviceName, String workspace) {
     def servicePom = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
-    private final String serviceVersion = servicePom.version.text()
+    def serviceVersion = servicePom.version.text()
 
     sh "docker build --pull --build-arg SERVICE_NAME=${serviceName} -t decker.trph.ru/${serviceName}:${serviceVersion} ${serviceName}"
     return this
