@@ -1,6 +1,6 @@
 package configs.services
 
-class Adapter-smdlp-emulator {
+class AdapterSmdlpEmulator {
     public static final String NAME         = 'srv-adapter-smdlp-emulator';
     public static final String PORT         = '8573';
     public static final String JAVA_VERSION = '10';
