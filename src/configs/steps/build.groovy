@@ -26,7 +26,7 @@ def parsePom(serviceName, workspace) {
 
 def dockerBuild(serviceName, serviceVersion) {
     sh "docker build --pull --build-arg SERVICE_NAME=${serviceName} -t docker.trph.ru/${serviceName}:${serviceVersion} ${serviceName}"
-//    sh "docker push docker.trph.ru/${serviceName}:${serviceVersion}"
+    sh "docker push docker.trph.ru/${serviceName}:${serviceVersion}"
 }
 
 def setEnv(workspace, serviceName, deployHost) {
