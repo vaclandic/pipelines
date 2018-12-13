@@ -21,8 +21,8 @@ def buildAndPush(java_version="10", serviceName) {
 }
 
 def dockerBuild(serviceName, workspace) {
-    def servicePom = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
-    def serviceVersion = servicePom.version.text()
+    servicePom = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
+    serviceVersion = servicePom.version.text()
 
     sh "docker build --pull --build-arg SERVICE_NAME=${serviceName} -t decker.trph.ru/${serviceName}:${serviceVersion} ${serviceName}"
     return this
