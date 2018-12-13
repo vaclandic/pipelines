@@ -25,7 +25,7 @@ def setEnv(workspace, serviceName, deployHost) {
     return this
 }
 
-def mvnBuild(java_version="10", serviceName, artifactoryConf) {
+def mvnBuild(java_version="10", serviceName) {
     env.JAVA_HOME="/jdk${java_version}"
 
     def server = Artifactory.newServer url: 'http://artifactory.trph.ru/artifactory', username: 'artifactory', password: 'Ieraipah1thu'
