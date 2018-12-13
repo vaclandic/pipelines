@@ -25,8 +25,8 @@ def setEnv(workspace, serviceName, deployHost) {
 }
 return this
 
-def mvnBuild(java_version=10) {
-    env.JAVA_HOME="/jdk${jdk}"
+def mvnBuild(java_version="10") {
+    env.JAVA_HOME="/jdk${java_version}"
     rtMaven.run pom: "service.NAME/pom.xml" as String, goals: "-U clean install -Dmaven.test.skip=true -s /home/jenkins/settings.xml", buildInfo: buildInfo
 }
 return this
