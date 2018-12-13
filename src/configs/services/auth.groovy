@@ -29,6 +29,22 @@ class Auth {
           cpu_limit: "200",
           memory_limit: "1024",
           jolokia_port: "8087",
+        ],
+        check: [
+          deploy_servers: "check2",
+          stage: "check",
+          debug_opts: "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=0.0.0.0:18284,suspend=n",
+          cpu_limit: "2000",
+          memory_limit: "4096",
+          jolokia_port: "8087",
+        ],
+        prod: [
+          deploy_servers: "prod2",
+          stage: "prod",
+          debug_opts: "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=0.0.0.0:18284,suspend=n",
+          cpu_limit: "2000",
+          memory_limit: "4096",
+          jolokia_port: "8087",
         ]
     ]
 }
