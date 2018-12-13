@@ -26,13 +26,14 @@ def setEnv(workspace, serviceName, deployHost) {
 }
 
 def mvnBuild(java_version="10", serviceName) {
-    env.JAVA_HOME="/jdk${java_version}"
-
     def server = Artifactory.newServer url: 'http://artifactory.trph.ru/artifactory', username: 'artifactory', password: 'Ieraipah1thu'
     def rtMaven = Artifactory.newMavenBuild()
+    env.JAVA_HOME="/jdk${java_version}"
+
     rtMaven.tool = "maven"
     buildInfo = Artifactory.newBuildInfo()
     rtMaven.deployer server: server, releaseRepo: 'artifactory', snapshotRepo: 'artifactory'
-    rtMaven.run pom: "serviceNAME/pom.xml" as String, goals: "-U clean install -Dmaven.test.skip=true -s /home/jenkins/settings.xml", buildInfo: buildInfo
+
+    rtMaven.run pom: "${serviceNAME}/pom.xml" as String, goals: "-U clean install -Dmaven.test.skip=true -s /home/jenkins/settings.xml", buildInfo: buildInfo
     return this
 }
