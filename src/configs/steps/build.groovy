@@ -3,7 +3,6 @@ package config.steps
 class Build implements Serializable {
     def checkoutFrom(repo, branch) {
         git([url: "git@bitbucket.org:TracePharm/${repo}", branch: "${branch}"])
-        return this
     }
     
     def buildAndPush(java_version="10", serviceName) {
@@ -36,6 +35,6 @@ class Build implements Serializable {
         if (debug == "true"){
            env.DEBUG_OPTS = service.DEBUG_OPTS
         }
-        return this
     }
+return this
 }
