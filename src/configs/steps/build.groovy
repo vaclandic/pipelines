@@ -2,8 +2,8 @@ package config.steps
 
 def checkoutFrom(repo, branch) {
     git([url: "git@bitbucket.org:TracePharm/${repo}", branch: "${branch}"])
+    return this
 }
-return this
 
 def artifactoryConfig() {
     def server = Artifactory.newServer url: 'http://artifactory.trph.ru/artifactory', username: 'artifactory', password: 'Ieraipah1thu'
@@ -22,8 +22,8 @@ def setEnv(workspace, serviceName, deployHost) {
     if (debug == "true"){
        env.DEBUG_OPTS = service.DEBUG_OPTS
     }
+    return this
 }
-return this
 
 def mvnBuild(java_version="10", serviceName, artifactoryConf) {
     env.JAVA_HOME="/jdk${java_version}"
@@ -34,5 +34,5 @@ def mvnBuild(java_version="10", serviceName, artifactoryConf) {
     def buildInfo = Artifactory.newBuildInfo()
     rtMaven.deployer server: server, releaseRepo: 'artifactory', snapshotRepo: 'artifactory'
     rtMaven.run pom: "serviceNAME/pom.xml" as String, goals: "-U clean install -Dmaven.test.skip=true -s /home/jenkins/settings.xml", buildInfo: buildInfo
+    return this
 }
-return this
