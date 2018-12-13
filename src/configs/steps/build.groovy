@@ -1,8 +1,8 @@
 package config.steps
 
 class Build {
-    def checkoutFrom(repo="tracepharmservices", branch="master") {
-        git([url: "git@bitbucket.org:TracePharm/${repo}.git", branch: "${branch}"])
+    def checkoutFrom(repo="tracepharmservices.git", branch="master") {
+        git([url: "git@bitbucket.org:TracePharm/${repo}", branch: "${branch}"])
         return this
     }
     
