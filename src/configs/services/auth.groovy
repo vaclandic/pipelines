@@ -9,7 +9,7 @@ class Auth {
         dev: [
           deploy_servers: "dev2",
           stage: "dev",
-          debug_opts: "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=0.0.0.0:18284,suspend=n"",
+          debug_opts: "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=0.0.0.0:18284,suspend=n",
           cpu_limit: "200",
           memory_limit: "1024",
           jolokia_port: "8087",
@@ -17,7 +17,7 @@ class Auth {
         test: [
           deploy_servers: "test2",
           stage: "test",
-          debug_opts: "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=0.0.0.0:18284,suspend=n"",
+          debug_opts: "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=0.0.0.0:18284,suspend=n",
           cpu_limit: "200",
           memory_limit: "1024",
           jolokia_port: "8087",
@@ -25,7 +25,7 @@ class Auth {
         stand1: [
           deploy_servers: "stand1",
           stage: "stand1",
-          debug_opts: "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=0.0.0.0:18284,suspend=n"",
+          debug_opts: "-Xdebug -Xrunjdwp:transport=dt_socket,server=y,address=0.0.0.0:18284,suspend=n",
           cpu_limit: "200",
           memory_limit: "1024",
           jolokia_port: "8087",
