@@ -20,6 +20,14 @@ def buildAndPush(java_version="10", serviceName) {
     rtMaven.deployer.deployArtifacts buildInfo
 }
 
+def dockeBuild(java_version="10", serviceName, workspace) {
+    def servicePom = new XmlSlurper().parse(new File("${worlspace}/${serviceName}/pom.xml"))
+    def serviceVersion = ${serviceVersion.version.text()}
+
+    sh "docker build --pull --build-arg SERVICE_NAME=${serviceName} -t decker.trph.ru/${serviceName}:${serviceVersion} ${serviceName}"
+    sh "docker push docker.trph.ru/${serviceName}:${serviceVersion}"
+}
+
 def setEnv(workspace, serviceName, deployHost) {
     def project = new XmlSlurper().parse(new File("${workspace}/${serviceName}/pom.xml"))
     env.SERVICE = serviceName
