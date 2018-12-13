@@ -16,10 +16,10 @@ def mvnBuild(java_version="10", serviceName) {
     rtMaven.deployer server: server, releaseRepo: 'artifactory', snapshotRepo: 'artifactory'
 
     rtMaven.run pom: "${serviceName}/pom.xml" as String, goals: "-U clean install -Dmaven.test.skip=true -s /home/jenkins/settings.xml", buildInfo: buildInfo
-    return this
+    return buildInfo
 }
 
-def pullArtifact() {
+def pullArtifact(buildInfo) {
     def server = Artifactory.newServer url: 'http://artifactory.trph.ru/artifactory', username: 'artifactory', password: 'Ieraipah1thu'
     def rtMaven = Artifactory.newMavenBuild()
 
