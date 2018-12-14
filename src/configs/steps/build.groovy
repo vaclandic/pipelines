@@ -51,6 +51,6 @@ def deployService(serviceName, serviceVersion, environment, deployStructure, deb
        env.DEBUG_OPTS = deployStructure[environment]['debug_opts'] 
     }
     sh "erb ${serviceName}/nomad.plan.erb > ${serviceName}/nomad.plan"
-    sh "nomad stop ${serviceName}-${environment} || exit 0"
-    sh "nomad run ${serviceName}/nomad.plan"
+//    sh "nomad stop ${serviceName}-${environment} || exit 0"
+//    sh "nomad run ${serviceName}/nomad.plan"
 }
