@@ -17,7 +17,7 @@ class DeployStructure {
     public static final String rtMaven = "Artifactory.newMavenBuild()"
     public static final String docker_reg = "docker.trph.ru"
 
-    public static final List services = [  
+    def services = [  
       'trph-app-primitive-build-pipeline': [
         'name': 'trph-app-primitive-pipeline',
         'tocken': 'MTkXmv8PXBURygSU6SRnjNCH_primitive'
