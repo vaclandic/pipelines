@@ -1,7 +1,8 @@
 package configs.services
 
 class Dispatcher {
-    public static final String NAME         = 'srv-dispatcher';
+    public static final String NAME            = 'srv-dispatcher';
+    public static final String SDKNAME         = 'sdk-dispatcher';
     public static final String PORT         = '8493';
     public static final String JAVA_VERSION = '10';
 

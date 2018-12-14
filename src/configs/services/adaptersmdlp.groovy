@@ -2,6 +2,7 @@ package configs.services
 
 class AdapterSmdlp {
     public static final String NAME         = 'srv-adapter-smdlp';
+    public static final String SDKNAME      = 'sdk-adapter-smdlp';
     public static final String PORT         = '8563';
     public static final String JAVA_VERSION = '10';
 

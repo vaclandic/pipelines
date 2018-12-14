@@ -1,7 +1,8 @@
 package configs.services
 
 class Processor {
-    public static final String NAME         = 'srv-processor';
+    public static final String NAME            = 'srv-processor';
+    public static final String SDKNAME         = 'sdk-processor';
     public static final String PORT         = '8513';
     public static final String JAVA_VERSION = '10';
 

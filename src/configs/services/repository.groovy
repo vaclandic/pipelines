@@ -1,7 +1,8 @@
 package configs.services
 
 class Repository {
-    public static final String NAME         = 'srv-repository';
+    public static final String NAME            = 'srv-repository';
+    public static final String SDKNAME         = 'sdk-repository';
     public static final String PORT         = '8543';
     public static final String JAVA_VERSION = '10';
 

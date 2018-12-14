@@ -1,7 +1,8 @@
 package configs.services
 
 class Signer {
-    public static final String NAME         = 'srv-signer';
+    public static final String NAME            = 'srv-signer';
+    public static final String SDKNAME         = 'sdk-signer';
     public static final String PORT         = '8533';
     public static final String JAVA_VERSION = '7';
 

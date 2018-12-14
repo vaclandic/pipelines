@@ -1,7 +1,8 @@
 package configs.services
 
 class Auth {
-    public static final String NAME         = 'srv-auth';
+    public static final String NAME            = 'srv-auth';
+    public static final String SDKNAME         = 'sdk-auth';
     public static final String PORT         = '8443';
     public static final String JAVA_VERSION = '10';
 

@@ -1,7 +1,8 @@
 package configs.services
 
 class Dictionaries {
-    public static final String NAME         = 'srv-dictionaries';
+    public static final String NAME            = 'srv-dictionaries';
+    public static final String SDKNAME         = 'sdk-dictionaries';
     public static final String PORT         = '8523';
     public static final String JAVA_VERSION = '10';
 

@@ -1,7 +1,8 @@
 package configs.services
 
 class Documentor {
-    public static final String NAME         = 'srv-documentor';
+    public static final String NAME            = 'srv-documentor';
+    public static final String SDKNAME         = 'sdk-documentor';
     public static final String PORT         = '8473';
     public static final String JAVA_VERSION = '10';
 

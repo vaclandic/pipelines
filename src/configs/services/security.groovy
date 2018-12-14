@@ -1,7 +1,8 @@
 package configs.services
 
 class Security {
-    public static final String NAME         = 'srv-security';
+    public static final String NAME            = 'srv-security';
+    public static final String SDKNAME         = 'sdk-security';
     public static final String PORT         = '8483';
     public static final String JAVA_VERSION = '10';
 

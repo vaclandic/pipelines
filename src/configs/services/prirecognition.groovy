@@ -1,7 +1,8 @@
 package configs.services
 
 class Prirecognition {
-    public static final String NAME         = 'srv-prirecognition';
+    public static final String NAME            = 'srv-prirecognition';
+    public static final String SDKNAME         = 'sdk-prirecognition';
     public static final String PORT         = '8453';
     public static final String JAVA_VERSION = '10';
 
